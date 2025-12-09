@@ -10,3 +10,13 @@ def count_characters(text):
         elif i in character_dict:
             character_dict[i] += 1
     return character_dict
+
+def list_maker(dict):
+    dictionary_list = []
+    for i in dict:
+        dictionary_list.append({"char": i, "num":dict[i]})
+    return dictionary_list
+
+def sort_on(list):
+    return list["num"]
+
