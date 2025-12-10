@@ -1,10 +1,15 @@
 from stats import count_words, count_characters, list_maker
+import sys
+
+if len(sys.argv) !=2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
 
 def get_book_text(path):
     with open(path) as file:
         return file.read()
 
-relative_path = "books/frankenstein.txt"
+relative_path = sys.argv[1]
 
 def main():
     return get_book_text(relative_path)
